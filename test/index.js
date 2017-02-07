@@ -14,7 +14,7 @@ describe('mergeAll', function () {
   })
 
   it('Should emit all the values from the internal streams emited', function() {
-    let result = []
+    var result = []
 
     merged$ = mergeAll(highOrderStream$)
 
@@ -35,7 +35,7 @@ describe('mergeAll', function () {
   })
 
   it('Should apply concurrency 1', function () {
-    let result = []
+    var result = []
 
     merged$ = mergeAll(1, highOrderStream$)
 
@@ -62,7 +62,7 @@ describe('mergeAll', function () {
   })
 
   it('Should apply concurrency n', function () {
-    let result = []
+    var result = []
 
     merged$ = mergeAll(2, highOrderStream$)
 
@@ -92,7 +92,7 @@ describe('mergeAll', function () {
   })
 
   it('Should emit even if not all streams have emitted', function() {
-    let result = []
+    var result = []
     merged$ = mergeAll(highOrderStream$)
 
     highOrderStream$(stream1$)
@@ -108,7 +108,7 @@ describe('mergeAll', function () {
   })
 
   it('Should finish when the high order stream and the emitted ones have finished', function () {
-    let result = []
+    var result = []
 
     merged$ = mergeAll(highOrderStream$)
 
@@ -134,7 +134,7 @@ describe('mergeAll', function () {
   })
 
   it('Should work if the streams are pushed asynchronously', function (done) {
-    let result = []
+    var result = []
 
     merged$ = mergeAll(highOrderStream$)
 
