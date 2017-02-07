@@ -1,3 +1,4 @@
+'strcit mode'
 var flyd = require('flyd')
 var mergeAll = require('../')
 var assert = require('assert')
